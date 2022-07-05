@@ -27,5 +27,6 @@ Route::controller(ParticipantsController::class)->group(function (){
     Route::post('/create/Participants','createParticipants')->name('createParticipants');
     Route::get('/display/Participants','displayParticipants')->name('displayParticipants');
     Route::get('/select/Participants','selectParticipants')->name('selectParticipants');
+    Route::post('/select/add/Participants','selectAddParticipants')->name('selectAddParticipants');
 });
 

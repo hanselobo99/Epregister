@@ -38,10 +38,13 @@ class ParticipantsController extends Controller
 
     public function selectParticipants()
     {
-        $data = Auth::user()->participants()->select('id','name')->get();
+        $data = Auth::user()->participants()->select('id', 'name')->get();
 
         return view('users.selectEvents', compact('data'));
     }
 
-
+    public function selectAddParticipants(Request $request)
+    {
+        return $request->all();
+    }
 }
