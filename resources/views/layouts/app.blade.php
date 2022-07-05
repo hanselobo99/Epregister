@@ -37,6 +37,7 @@
                         <li><a class="nav-link" href="{{ route('addParticipants') }}">{{ __('Add Participants') }}</a></li>
                         <li><a class="nav-link" href="{{ route('displayParticipants') }}">{{ __('Display Participants') }}</a></li>
                         <li><a class="nav-link" href="{{ route('selectParticipants') }}">{{ __('Select Participants') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('typeParticipants') }}">{{ __('Type Participants') }}</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

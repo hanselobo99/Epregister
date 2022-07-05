@@ -17,15 +17,16 @@ class ParticipantsController extends Controller
     {
         $data = $request->all();
         unset($data['_token']);
-        $count = count($data) / 3;
-        for ($i = 1; $i < $count; $i++) {
+        $count = count($data) / 4;
+
+        for ($i = 1; $i <= $count; $i++) {
             $dt = new Participants([
                 'name' => $data['name' . $i],
                 'email' => $data['email' . $i],
                 'phone' => $data['phone' . $i],
                 'dob' => $data['dob' . $i]
             ]);
-//            Auth::user()->participants()->save($dt);
+            Auth::user()->participants()->save($dt);
         }
         return to_route('/');
     }
@@ -46,5 +47,8 @@ class ParticipantsController extends Controller
     public function selectAddParticipants(Request $request)
     {
         return $request->all();
+    }
+    public function typeParticipants(){
+        return view('users.typeParticipants');
     }
 }
